@@ -1,0 +1,153 @@
+/* Importação da fonte 'Roboto' a partir do Google Fonts: */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
+
+/* Resetando as margens, preenchimentos e 'box-sizing' de todos os elementos: */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Aplicando estilos no 'body' para o background da página, bem como a fonte padrão da aplicação: */
+body {
+  background-color: #0b3666;
+  font-family: "Roboto", Arial, sans-serif;
+  color: #d4d4d4;
+}
+
+/* Fazendo o contâiner da aplicação ocupar todo o espaço disponível em tela e colocar o 'app' no centro da tela: */
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* Estilizando a largura total de visualização da aplicação */
+#app {
+  width: 100%;
+  max-width: 768px;
+}
+
+/* Tornando o 'header' da aplicação um contâiner flexbox para que seus elementos fiquem distribuídos ao centro de maneira uniforme: */
+#app-header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Aplicando tamanho da fonte para o título da aplicação: */
+#app-header h1 {
+  font-size: 2.5rem;
+}
+
+/* Adicionando uma margem entre o cabeçalho e a lista de tarefas, além de um preenchimento: */
+#to-dos-list {
+  margin-top: 1.5rem;
+  padding: 1rem;
+}
+
+/* Estilizando cada to-do, ou seja, cada tarefa adicionada, colocando uma cor de fundo levemente diferenciada e transformando-os em contâiners flexbox para espaçar os elementos internos: */
+.to-do {
+  background-color: #092c53;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Colocando uma margem à direita da checkbox para não colidir com o texto da tarefa: */
+.to-do input[type="checkbox"] {
+  margin: 0 1rem;
+}
+
+/* Tirando a estilização padrão de 'input' do tipo 'text', além de adicionando propriedades 'flex' para que o texto da tarefa ocupe todo o espaço disponível: */
+.to-do input[type="text"] {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #d4d4d4;
+  font-size: 1.3rem;
+  margin-right: 1rem;
+  flex: 1 1 0%;
+}
+
+/* Adicionando um estilo para quando o texto da tarefa estiver disponível para edição, ou seja, sem o atributo 'disabled': */
+.to-do input[type="text"]:not(:disabled) {
+  border-bottom: 2px solid #d4d4d4;
+}
+
+/* Estilizando toda a tarefa com uma opacidade menor se ela possuir também a classe 'complete': */
+.to-do.complete {
+  opacity: 0.7;
+}
+
+/* Estilizando o texto da tarefa com uma linha cruzada e itálico se ela possuir também a classe 'complete': */
+.to-do.complete input[type="text"] {
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+/* Criando um 'outline' para cada tarefa quando o cursor estiver em cima dela ou tiver a selecionado: */
+.to-do:hover,
+.to-do:focus-within {
+  outline: 2px solid #d4d4d4;
+}
+
+/* Aplicando novos estilos gerais aos botões da aplicação: */
+button {
+  background-color: #0b3666;
+  border: 2px solid #d4d4d4;
+  border-radius: 8px;
+  padding: 0.2rem;
+  color: #d4d4d4;
+  cursor: pointer;
+}
+
+/* Aplicando estilo específico para o botão de criar uma nova tarefa: */
+button#create-btn {
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Adicionando uma margem à direita do botão de edição para separá-lo do botão de remoção: */
+button.edit-btn {
+  margin-right: 1rem;
+}
+
+/* Adicionando um transição de opacidade para o botão de edição quando o usuário passar o mouse por cima dele: */
+button.edit-btn:hover {
+  opacity: 0.8;
+}
+
+/* Adicionando um transição de cor de fundo para o botão de remoção quando o usuário passar o mouse por cima dele: */
+button.remove-btn:hover {
+  background-color: #dc143c;
+}
+
+/* Melhorando a responsividade da aplicação para dispositivos com dimensões menores: */
+@media (max-width: 590px) {
+  #app-header h1 {
+    display: none;
+  }
+
+  .to-do {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .to-do input[type="text"] {
+    margin: 0;
+  }
+
+  .to-do input[type="text"] {
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+  }
+}
