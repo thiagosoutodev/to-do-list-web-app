@@ -1,6 +1,6 @@
-# to-Do List App (PT-BR)
+# To-Do List App (PT-BR)
 
-Esta aplicação web trata-se de um gerenciador de tarefas com checkbox e as quatro operações básicas de um sistema CRUD simples. Deploy link: <https://thiagosoutodev.github.io/toDoListProject/>.
+Esta aplicação web trata-se de um gerenciador de tarefas com checkbox e as quatro operações básicas de um sistema CRUD simples. Deploy link: <https://thiagosoutodev.github.io/to-do-list-web-app/>.
 
 ---
 
@@ -32,9 +32,9 @@ Projeto desenvolvido apenas com fins educacionais.
 
 ---
 
-# to-Do List App (EN)
+# To-Do List App (EN)
 
-This web application is a task manager with a checkbox feature and the four basic operations of a simple CRUD system. Deploy link: <https://thiagosoutodev.github.io/toDoListProject/>.
+This web application is a task manager with a checkbox feature and the four basic operations of a simple CRUD system. Deploy link: <https://thiagosoutodev.github.io/to-do-list-web-app/>.
 
 ---
 
